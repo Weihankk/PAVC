@@ -1,16 +1,21 @@
 # **PAVC**
 ## **Introduction**
-PAVC (PAV Classifier) is developed for presence/absence variation (PAV) identification and easily obtain vcf format results. It is based on the results of SyRI, which is a accurate structural variation detect tools. Use PAVC, you can performs accurate classification and get results files in vcf format, which can be very conveniently used for downstream analysis like graph pan-genome construction, GWAS, population genetic analysis, etc.
+PAVC (PAV Classifier) is developed for presence/absence variation (PAV) identification and easily obtain vcf format results. It is based on the results of [SyRI](https://github.com/schneebergerlab/syri), which is a accurate structural variation detect tools. Use PAVC, you can performs accurate classification and get results files in vcf format, which can be very conveniently used for downstream analysis like graph pan-genome construction, GWAS, population genetic analysis, etc.
 ## **Requirement**
- - R
- - R package - data.table and Biostrings
+ - [R](https://www.r-project.org/)
+ - R packages - [data.table](https://github.com/Rdatatable/data.table) and [Biostrings](https://www.bioconductor.org/packages/release/bioc/html/Biostrings.html)
    - `install.packages("data.table")`
    - ```
       if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")  
       BiocManager::install("Biostrings")```
- - bcftools
+ - [bcftools](http://www.htslib.org/download/)
 
 ## **Usuage**
+**First of all, please download PAVC.**
+
+`git clone https://github.com/Weihankk/PAVC.git`
+
+--------------------------------------------------
 1. **Now suppose you have prepared two genomes for SV calling and would like to classify them into PAV.**
    - `refgenome`: Reference genome
    - `qrygenome`: Query genome
