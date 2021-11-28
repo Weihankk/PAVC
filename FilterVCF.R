@@ -1,7 +1,7 @@
 library(data.table)
 
 args <- c("pavc.norm.vcf","50")
-args <- commandArgs()
+args <- commandArgs(T)
 
 len <- as.integer(args[2])
 vcf <- fread(args[1], header = T, sep = "\t")
