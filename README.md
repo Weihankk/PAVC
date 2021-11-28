@@ -30,8 +30,9 @@ PAVC (PAV Classifier) is developed for presence/absence variation (PAV) identifi
    `Rscript GetVCF.R pavc.txt query_name`  
    `bgzip pavc.vcf -@ 6`  
    `bcftools index pavc.vcf.gz --threads 6`  
-   `bcftools norm -d all -cx -f refgenome pavc.vcf.gz > pavc.norm.vcf` 
-   `Rscript FilterPAV.R pavc.norm.vcf 50`
+   `bcftools norm -d all -cx -f refgenome pavc.vcf.gz > pavc.norm.vcf`  
+   `Rscript FilterPAV.R pavc.norm.vcf 50`  
+   `Rscript StatResult.R pavc.norm.FilterLen50.vcf pavc.txt` 
    > For **FilterPAV.R**, _50_ indicated only keep PAV with length >= 50bp.
 
 
