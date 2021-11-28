@@ -72,3 +72,7 @@ Therefore, concat all DSTRs we can got the refgenome/qrygenome. However, the coo
 - **INS** : Can be regarded as presnece
 - **DEL** : Can be regarded as absence
 #### Step 5. Combine PAV
+
+
+## **Issues**
+If you have any questions with installation and usage, please open a new issue in [Issues](https://github.com/Weihankk/PAVC/issues).
