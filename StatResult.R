@@ -26,4 +26,4 @@ res <- data.table(V1 = c("Presence count:", "Absence count:", "Translocation cou
                   V2 = c(nrow(vcf[which(vcf$ALTLEN > vcf$REFLEN)]), nrow(vcf[which(vcf$ALTLEN < vcf$REFLEN)]), nrow(other[which(other$Type == "TRANS")]), nrow(other[which(other$Type == "INV")]),
                          sum(vcf$LEN[which(vcf$ALTLEN > vcf$REFLEN)]), sum(vcf$LEN[which(vcf$ALTLEN < vcf$REFLEN)]), sum(other$LEN[which(other$Type == "TRANS")]), sum(other$LEN[which(other$Type == "INV")]),
                          nrow(vcf) + nrow(other), sum(vcf$LEN) + sum(other$LEN)))
-fwrite(res, file = "pav.final.stat.txt", sep = "\t", quote = F, col.names = F, row.names = F)
+fwrite(res, file = "pavc.final.stat.txt", sep = "\t", quote = F, col.names = F, row.names = F)

@@ -1,7 +1,7 @@
 library(data.table)
 
 #args <- c("syri.out")
-args <- commandArgs()
+args <- commandArgs(T)
 
 syri.out <- fread(args[1], header = F)
 

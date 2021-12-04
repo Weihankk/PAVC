@@ -2,7 +2,7 @@ library(Biostrings)
 library(data.table)
 
 args <- c("pavc.txt","HT")
-args <- commandArgs()
+args <- commandArgs(T)
 
 pavc <- fread(args[1], header = T, na.strings = "-")
 pavc <- pavc[which(pavc$Type != "INV" & pavc$Type != "TRANS")]
