@@ -5,6 +5,8 @@ args <- commandArgs(T)
 
 syri.out <- fread(args[1], header = F)
 
+
+options(scipen=200)
 # Step 1. Extract DSTRs and sort them according to the refgenome and qrygenome, respectively.
 dstr <- syri.out[which(syri.out$V11 %in% c("SYN", "INV", "TRANS", "INVTR", "DUP", "INVDP", "NOTAL"))]
 dstr$V2 <- as.integer(dstr$V2)
